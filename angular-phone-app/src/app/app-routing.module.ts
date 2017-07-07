@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PhoneListComponent } from './phone-list/phone-list.component';
 import { PhoneDetailsComponent } from './phone-details/phone-details.component';
-
+import { AddPhoneComponent } from './add-phone/add-phone.component';
 
 const routes: Routes = [
   { path: '', component: PhoneListComponent },
+
+  { path: 'add', component: AddPhoneComponent },
 
   { path: 'phone/:id', component: PhoneDetailsComponent },
 

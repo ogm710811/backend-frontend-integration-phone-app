@@ -22,6 +22,12 @@ export class PhoneService {
       .then(apiResponse => apiResponse.json())
   }
 
+  createNew(dataToSend) {
+    return this.myHttp.post(`${this.BASE_URL}/api/phones`, dataToSend)
+      .toPromise()
+      .then(apiResponse => apiResponse.json())
+  }
+
   edit(phone) {
     return this.myHttp.put(`${this.BASE_URL}/api/phones/${phone.id}`, phone)
       .toPromise()
